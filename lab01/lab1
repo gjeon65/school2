@@ -1,0 +1,97 @@
+CS 265 Lab 1
+by Geun Jeon
+
+Q1: When I tried the command “man .bashrc” and “.bash_profile”, the
+shell gave comment back “No manual entry for .bashrc” and “No manual entry
+for .bash_profile. However, when I tried “man bash”, the shell gave me
+general commands manual for the bash. There was information about bash. I
+tried command “? bashrc”  but it did not match any but I tried “?bash” and
+search down to ~/.bashrc.
+
+Q2: File is saved
+
+Q3: The result:
+ total 40
+-rw-rw-r--+ 1 gj65 gj65   440 Oct  1 05:08 lab1
+-rw-rw-r--  1 gj65 gj65 33248 Oct  1 05:01 vi_lab
+
+Q4:For chmod 644 =
+						6: owner(user)-> read and write
+						4: group-> read
+						4: world-> read
+
+Q5:For chmod 755 =
+						7: User -> all permissions
+						5: Group -> read and execute
+						5: World -> read and execute
+
+Q6: Yes
+
+Q7: Yes
+
+Q8: No, the permission was denied
+
+Q9: I can use "chmod 7xx or 5xx". Example) chmod 700 hello.bash
+
+Q10: First, vi gave message saying that the file is read only. Next, when I
+modified and save and exit, it gave error message 'readonly' option is set
+(add ! to override). I had to q! to force quit. Also, when I "ls" in
+directory, there is a file named 'a'.
+
+Q11: Following is output of each commands:
+
+	gj65@tux2 lab01> ls *
+	annoy     funny       itemList        lab1           UnitTestingPhase
+	annoy.cc  hello.bash  itemList-2cols  TelecomTruths  vi_lab
+
+	gj65@tux2 lab01> ls a*
+	annoy  annoy.cc
+
+	gj65@tux2 lab01> ls *m*
+	itemList  itemList-2cols  TelecomTruths
+
+	gj65@tux2 lab01> ls anno?
+	annoy
+
+	gj65@tux2 lab01> ls annoy?
+	ls: cannot access 'annoy?': No such file or directory
+
+
+Q12: At first, file does not save. I cannot find file with ls command. Next,
+on second try, vi "a space" file was able to save and remove it with rm a\
+space command
+
+Q13: The results are following:
+
+	 gj65@tux5 lab01> echo Is a < b?
+	-bash: b?: No such file or directory
+	gj65@tux5 lab01> echo "Is a < b?"
+	Is a < b?
+	gj65@tux5 lab01> echo "$\USER is $USER"
+	$\USER is gj65
+	gj65@tux5 lab01> echo '\$USER is $USER'
+	\$USER is $USER
+	gj65@tux5 lab01> echo "Today is 'date'"
+	Today is 'date'
+	gj65@tux5 lab01> echo "Today is $(date)"
+	Today is Sun Oct  1 06:54:29 EDT 2017
+	gj65@tux5 lab01> echo 'Today is 'date''
+	Today is date
+	gj65@tux5 lab01> echo -e "Files that start w/e:\n`ls e*`"
+	ls: cannot access 'e*': No such file or directory
+	Files that start w/e:
+
+
+Q14: sort -n lists items in ascending order whereas "sort itemList-2cols"
+lists without numerical order.
+
+Q15: sort -nr itemList-2cols | head -8
+
+Q16:  lab1.tar.gz  
+
+Q17: It replaced lab1.tgz to lab1.tar
+
+Q18: It's located in TelecomTruths
+
+Q19: grep -iw "vacation" *
+
