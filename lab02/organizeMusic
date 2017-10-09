@@ -1,0 +1,22 @@
+#!/bin/bash
+#Geun Jeon
+#CS 265 lab2 Q12
+
+for i in *.mp3; do
+
+dashIndex=$(expr index "$i" "-");
+file=${i:$dashIndex};
+file=${name#" "};
+
+name=${i:0:$dashIndex};
+name=${name%" - "};
+
+path="$name""/""$name";
+echo "$path";
+
+if [ ! -d "$name" ]
+then 
+mkdir "$name"
+fi 
+mv "$i" "$path";
+done

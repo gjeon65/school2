@@ -1,0 +1,69 @@
+Geun Jeon
+CS265-002
+Lab 2
+
+Q1: Following is the output:
+
+gj65@tux2 Git> pushd ~/
+~ ~/CS265/Git
+
+gj65@tux2 ~> find . -type f -mtime -2 -print
+./CS265/Git/lab2
+./.viminfo
+
+Q2: find . -type f -name "*.bash"
+
+Q3: Following is the output:
+
+gj65@tux2 lab02> find . -type f -name "*.bash"
+./tmp/gotMe.bash
+
+Q4: There are 2960 chars. I attached output below:
+
+gj65@tux2 lab02> wc -m breadIsDangerous.txt
+2960 breadIsDangerous.txt
+
+Q5: There are 10 'the' in the file. I attached my input and result below:
+
+gj65@tux2 lab02> grep -o 'the' breadIsDangerous.txt | wc -l
+10
+
+Q6: ispell -b gives back spelling errors. (Spell check)
+
+Q7:'An extra line' comes out
+
+Q8: Nothing came out
+
+Q9:
+First, grep finds word matching 'dough' from breadIsDangerous.txt as
+following:
+ 
+gj65@tux4 lab02> grep dough breadIsDangerous.txt
+roven that as little as one pound of dough can be used to
+5.   Bread is made from a substance called "dough." It has been
+proven that as little as one pound of dough can be used to
+
+Next, $? prints out most recent foreground pipeline exit status. So, in this
+case, it prints out 0 as following:
+
+gj65@tux4 lab02> echo $?
+0
+
+Next, there is no uniqueString so it prints out nothing. And next pipeline
+count is 1.
+
+gj65@tux4 lab02> grep uniqueString breadIsDangerous.txt
+gj65@tux4 lab02> echo $?
+1
+
+Finally, since there is a file name noSuchFile, it messages user that it
+does not exist. and next $? count is 2.
+
+gj65@tux4 lab02> grep dough noSuchFile
+grep: noSuchFile: No such file or directory
+gj65@tux4 lab02> echo $?
+2
+
+
+
+

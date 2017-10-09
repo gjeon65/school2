@@ -1,0 +1,11 @@
+#!/bin/bash
+#Geun Jeon
+#CS 265 Q 11
+
+for i in *; do
+newName=${i/$1/$2};
+echo "$newName";
+if [ "$i" != "$newName" ];then
+mv "$i" "$newName";
+fi
+done
