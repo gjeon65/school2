@@ -1,0 +1,109 @@
+#Geun Jeon
+#CS265
+#lab04
+
+1.1
+	Naming on TRUE and FLASE is misleading. Typically, 0 means flase and 1
+means ture. But in this case, it is opposite. It might cause confusion to
+the readers.
+
+1.2
+
+int smaller ( char *s, char *t)
+{
+	if ( strcmp(s, t) < 1)
+		return 1;
+	else
+		return 0;
+}
+
+1.3 
+	if function falloc which takes in parameters named SMRHSHSCRTCH,
+S_IFEXTI0944, and MAXRODDHSH and return value is less than 0.
+
+I guess the main point of this question is that naming is important.
+
+1.4
+	if ( c != 'y' || c != 'Y')
+		return;
+------------------------------------
+	if (length < BUFSIZE)
+		length = BUFSIZE;
+------------------------------------
+	if (!flag)
+		return 1;
+------------------------------------
+	if(*line'"')
+	{
+		quote = 1;
+	}
+	else
+	{
+		quote = 0;
+	}
+-----------------------------------
+	bit = (val & 1) ? 1 : 0;
+	
+
+1.5 
+	This can be improved by spacing. Also, read function takes *ip(pointer)
+but in insert function, it takes &val (reference).
+
+1.6
+	2 1
+
+1.7
+	
+	if ( istty(stdin) || istty(stdout) || istty(stderr))
+		return 0;
+
+-----------------------------------------------------------
+	if ( retval != SUCCESS)
+		return retval;
+	else
+		return SUCCESS;
+-----------------------------------------------------------
+
+	for ( k = 0 ; k < 5 ; k++ )
+	{
+		scanf("%dlf", &dx);
+		x += dx;
+	}
+
+1.8
+	for ( int count = 0; count < total; count++ )
+	{
+		if (this.getName(count) == nametable.userNAme())
+		{
+			return true;
+		}
+	}
+
+
+
+1.9
+	c will be compute twice.
+
+
+1.10
+	#define FEET_TO_METERS 0.3048
+	#define METERS_TO_FEET 3.28084
+	#define MILES_TO_FEET 5280.0
+	#define MILES_TO_KILOMETER 1.809344
+	#define SQUARE_MILES_TO_SQAURE_KILOMETER 2.589988
+
+1.11
+	Void function does not return therefore comment is misleading
+------------------------------------------------
+	It is obvious comment
+-----------------------------------------------
+	increment line counter comment and increment line counter can be omiited
+since comments begining of the function explained.
+
+
+
+
+
+
+
+
