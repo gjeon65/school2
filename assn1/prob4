@@ -4,11 +4,22 @@
 #problem 4
 
 #make temporary file
+
+
 touch holdTemp
 
 for dir in $ARCHIVE/*
+do
+	for i in $dir/*
 	do
-	name=egrep '^To: ' $dir
-	echo "$name" >> holdTemp
+	grep '^TO: ' $i | grep '@' |\
+	 awk '{print $2}' | awk 'BEGIN{FS="@"}{print$2}' >> holdTemp
+	done
 done
+
+sort holdTemp | uniq -cd| sort -gr > holdTemp
+awk '{print $2/$1}' holdTemp
+
+wc -l holdTemp | awk '{print "total: " $1}'
+
 
