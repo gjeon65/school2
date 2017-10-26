@@ -1,0 +1,16 @@
+#!/bin/bash
+#CS265
+#Assignment1
+#problem 3
+
+
+#Get date from the user
+date="$2/$3/$1" 
+#grep 'TimeStamp' from archive then user input to array
+time=$(grep -rl "^TimeStamp: $date" $ARCHIVE)
+#loop through array for finding exact date
+for i in $time 
+	do
+		result=${i##*/} 
+		echo $result
+done

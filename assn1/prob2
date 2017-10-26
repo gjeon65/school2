@@ -1,0 +1,25 @@
+#!/bin/bash
+#CS265
+#Assignment1
+#problem 2
+
+#make temporary file
+touch hold
+
+#loop archive 
+for dir in $ARCHIVE/*
+   do
+   for file in $dir/*
+      do
+      #get file and thread and append to temp file
+      #remove matching prefix pattern and get treahd extension
+		fileName=${file##*/}
+      thread=${fileName%_*}
+      echo "$thread" >> hold
+
+   done
+done
+
+sort hold | uniq -c | sort -r|\
+awk 'BEGIN{sort=0;}NR==1{sort=$1;}{if($1==sort)print $2;}END{print sort;}'
+

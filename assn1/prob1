@@ -1,0 +1,22 @@
+#!/bin/bash
+#CS 265
+#Assignment 1
+#problem 1
+
+#calling gloval variables
+directory=0
+message=0
+#searches all directories
+for dir in $ARCHIVE/*
+	do 
+	#addes directory to global variables
+	directory=$((directory+1))
+		#in directory, add messages to global
+		for file in $dir/*
+			do
+			message=$((message+1))
+		done
+done
+
+#print results
+echo "Directory: "$directory "Message: "$message

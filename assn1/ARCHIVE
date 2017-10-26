@@ -1,0 +1,5 @@
+#!/bin/bash
+
+ARCHIVE= /home/gj65/CS265/Git/assn1/DrMathArchive
+export ARCHIVE
+

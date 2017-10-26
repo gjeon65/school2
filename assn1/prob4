@@ -1,0 +1,14 @@
+#!/bin/bash
+#CS265
+#Assignment1
+#problem 4
+
+#make temporary file
+touch holdTemp
+
+for dir in $ARCHIVE/*
+	do
+	name=egrep '^To: ' $dir
+	echo "$name" >> holdTemp
+done
+
