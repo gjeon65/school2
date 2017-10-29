@@ -1,0 +1,78 @@
+#CS 265
+#Lab 5
+#Geun Jeon
+
+
+Q1:
+	i.  List - It is an abstract data type that represents an ordered sequence
+of valuesm, where the same vbalue may occur more than oce.
+
+	ii. Stack - It serves as a collection of elements, with two principal
+operations: push, which adds an element to the collection, and pop, which
+removes the last element that was added.
+
+	iii. Queue - collection in which the entities in the collection are kept
+in order and the principal operations on the collection are the addition of
+entities to the rear terminal position, known as enqueue, and removal of
+entities from the front terminal position, know as dequeue.
+
+	iv. Dictionary - it composed of a collection of  (key, value) pairs, such
+that each possible key appears just once in the collection.
+
+Q2: 
+
+log2 N, divide in half the elements until you find specific element. In
+Mathematic, 1 = N/2^x ; 2^x = N ; log2(2^x) = log 2 N ; x = log2 (N)
+
+Q3:
+
+If the sequence has n items, then, in the worst case, all n items in the
+sequence will be checked against the target for equality.
+
+Q4: when searching for unsorted list, then linear search would be preferable
+over the binary search.
+
+
+
+Q5:
+
+*84* 37 93 82 98 27 63 73 93 27 75 55 45 8
+*37* 82 27 63 73 27 75 55 45 8 *84* 93 98 93
+*37* 82 27 63 73 27 75 55 45 8 84 *93* 98 93
+27 27 8 *37* 82 63 73 75 55 45 84 *93* 98 93
+*27* 27 8 37 *82* 63 73 75 55 45 84 93 *98* 93
+8 *27* 27 37 63 73 75 55 45 *82* 84 93 93 *98*
+8 27 27 37 *63* 73 75 77 45 82 84 93 93 98
+8 27 27 37 45 *63* 73 75 77 82 84 93 93 98
+8 27 27 37 45 63 *73*75 77 82 84 93 93 98
+8 27 27 37 45 63 73 *75* 77 82 84 93 93 98
+8 27 27 37 45 63 73 75 77 82 84 93 93 98
+
+Q6:
+l-> 3 6 24
+
+Q7:
+l->[13,[28,[24,[3, None]]]]
+
+Q8: Pointers points at the same memory location but *s gets new memory and *
+does not. Therefore, final output is different.
+
+Q9: cos, 86; bob, 38; Jaga, 24 ; Kate, 28; Nash, 11; Vera, 99; Jesse, 78
+
+Q10:  
+
+int find( char *key, int *p_ans )
+{
+   int j;
+   int a = hash(key);
+   for( j = 0; j < a; ++j)
+   {
+      if ( key == a )
+      {
+         return 1;
+      }
+      else
+         return 0;
+   }
+}
+
