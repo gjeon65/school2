@@ -1,0 +1,67 @@
+Q1. add() will add prefix to the table whereas addSuffix will add suffix to the table.
+
+Q2. It will find prefixes. add(), build() /* it contains add()*/, and
+generate().
+
+Q3.
+   ========================================================
+   Input prefix      |Suffix words that follow| pointers
+	+=================+========================+============
+	|(null)(null)     |        It's            |    3
+	+=================+========================+============
+	|(null) It's      |        a               |    3
+	+=================+========================+============
+	| It's a          |        new             |    3
+	+=================+========================+============
+	| a               |        new             |    2
+	+=================+========================+============
+	| new             |        (null)          |    1
+	========================================================	
+
+Q4. Lesser memory is used than storing entire strings.
+
+Q5. Must deallocate memory block(free()). Or else, it can modify other
+memories.
+
+Q6.
+
+void cleanup(){
+	State *sp = NULL;
+	State *temp = NULL;
+
+	for (int i	= 0; i < NPREF; i++)
+		{
+			for (sp =statetab[i]; sp != NULL; sp=temp)
+			{
+				temp = sp->next;
+				free(sp);
+			}
+		}
+}
+
+Q7. No, it kept throws me error. I am not sure what causes it.
+
+Q8. Each prefix and suffix should be free from the procedure, it can not be
+free twice or more.
+
+Q9. prefixes are stored in deque. It can insert and delete front, mid and end.
+I believe, this used deque for add or delete from both the ends.
+
+Q10. it uses map
+
+Q11. it used vector for satellite data
+
+Q12. it allow us to use built-in tools in C++. So, it is easier to code.
+
+Q13. using hash table is faster than map
+
+Q14. w1 and w2 are stored as dictionary. 
+
+Q15. dictionary
+
+Q16. list
+
+Q17. Since python treats everything as an object, it will take up lot more
+memory spaces therefore it is slower than C++
+
+Q18. It is slower than C++
