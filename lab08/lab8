@@ -1,0 +1,41 @@
+Part 1: Interfaces
+
+1.1 
+
+i) prevent certain aspects of a class or software component from being
+accessible to its clients
+ii) non-overlapping functions, capabilities that does minimum set of
+behaviors
+iii)an interface only do what its suppose to do and should not do anything
+else without user's consent or knowledge
+iv)be consistent with interfaces or programs
+
+1.2
+
+doesn't handle lines more than 199 characters
+assumes records have at most 20 fields
+records separated by newline
+fields are sperated by commas
+
+
+1.3
+
+new features were introduced such as inline functions, new data types,
+variable-length arrays and flexible array members.
+
+1.4
+
+No,it can't parse two files at same time.Those static variable should be
+used with a particular object and running two
+files at same lifetime of program is not suitable.
+
+1.5
+
+Yes, programmer can use different approach to replace pointer. 
+
+1.6
+
+Yes, it is consistent, has small orthgonal set of primitives, hidden
+implementation details, and does not reach bind the uer's back.
+
+
