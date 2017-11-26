@@ -1,0 +1,65 @@
+#!/bin/bash
+#
+# Kurt Schmidt
+# 8/06
+#
+
+	### HELPER FUNCTIONS and GLOBAL PREFS ###
+	# NOTE:  Personal settings (editor, pager) are set in $UTIL
+${UTIL:=grade_utils.bash}
+
+if [ -e ./"$UTIL" ] ; then
+	. ./"$UTIL"
+elif [ -e ~/bin/"$UTIL" ] ;  then
+	. ~/bin/"$UTIL"
+else
+	echo -e "\n$0:  Need $UTIL (See \$UTIL in grade script)"l
+	echo -e '\tEither in CWD or in ~/bin'
+	exit 1
+fi
+
+
+### VIEW/RUN ########################
+
+src=build.xml
+
+echo -e "\ncalc.java"
+echo '----------'
+
+	# remove binaries, to build from scratch
+\rm -f *.class
+
+	# Check for file
+bFound=1
+f=$src
+checkForFile f
+rv=$?
+	# got a file, but bad name
+if [ $rv = "1" ] ; then
+	echo "Bad filename!  Wanted $src, found $f   -1"
+fi
+
+if [ $rv = '2' ] ; then # couldn't find file
+	echo "$src not found!"
+	bFound=0
+fi
+
+### VIEW/RUN ########################
+
+	# RUN
+tmp=`mktemp out.XXXXXX`
+
+ant compile
+
+echo "  Output:"
+( ant run 2>&1 ) | tee $tmp
+
+echo -e "\n  diff, against expected:"
+diff $tmp ../expected.out
+
+	# CLEAN UP
+\rm $tmp
+\rm -f *.class
+
+echo -e "\nDone!"
+popd &> /dev/null
