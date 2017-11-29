@@ -152,7 +152,7 @@ public class infix2postfix{
 public static void main(String[] args) {  
 
 	try{
-		File file = new File("./src/assignment3/input.infix");
+		File file = new File("./input.infix");
 		FileReader fileReader = new FileReader(file);
 		BufferedReader bufferedReader = new BufferedReader(fileReader);
 		StringBuffer stringBuffer = new StringBuffer();
