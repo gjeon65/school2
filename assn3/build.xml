@@ -10,6 +10,7 @@
 
 	<target name="infix2postfix">
 		<javac srcdir='./' includes='infix2postfix.java' />
+			<compilerarg value="-Xlint"/>
 			<java classname='infix2postfix'>
 				<arg value='${CLASSPATH}/input.infix'/>
 			</java>

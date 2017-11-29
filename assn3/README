@@ -8,4 +8,9 @@ However, when I transfered to PuTTy it throw errors.
 In my further research, PuTTy happens to compile differently then Eclipse
 and some of the features aren't provided. 
 
+Following is error command:
+
+Note: infix2postfix.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+
 

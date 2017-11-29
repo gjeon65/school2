@@ -1,3 +1,6 @@
+
+
+
 /* @author Geun Jeon
  * CS 265 
  * Assignment 3
@@ -22,7 +25,7 @@ import java.util.*;
 
 public class infix2postfix{
 	public String infixToPostfix(String infix) {
-        Stack operatorStack = new Stack();  
+        Stack<String> operatorStack = new Stack<String>();  
         char c;       
         StringTokenizer parser = new StringTokenizer(infix,"+-*/%() ",true);
         StringBuffer postfix = new StringBuffer(infix.length());
@@ -104,7 +107,7 @@ public class infix2postfix{
 
    public int evaluate(String expr) {
 
-	       Stack stack = new Stack();
+	       Stack<Integer> stack = new Stack<Integer>();
 	        int op1, op2, result = 0;
 	        String token;
 	        StringTokenizer tokenizer = new StringTokenizer(expr);
@@ -174,7 +177,7 @@ public static void main(String[] args) {
 		e.printStackTrace();
 	}
    
-   infix2postfix converter = new infix2postfix();
+   
 
   
 } 
