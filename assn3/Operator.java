@@ -1,3 +1,12 @@
+// Geun Jeon
+// CS 265
+// Assignment 3
+// 2017-11-27
+// Source code provided by Prof. Kurt. 
+
+
+
+
 // Operator.java - operator token (+ - * / ( ) %)
 //
 // Kurt Schmidt
@@ -29,7 +38,8 @@ public class Operator extends Token {
 	protected int getPrec()
 	{
 		// TODO:  use a switch, whatever, assign ordinals to operators
-		return 0;
+		
+
 	}
 
 		// handy for comparing 2 operators

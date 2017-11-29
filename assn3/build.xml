@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project>
+	<target name="clean">
+		<delete dir="build"/>
+	<target>
+	<target name="compile">
+		<mkdir dir="build/classes" />
+		<javac srcdir="." destdir="build/classes" includeantruntime="false"/>
+	</target>
+
+	<target name="infix2postfix">
+		<javac srcdir='./' includes='infix2postfix.java' />
+			<java classname='infix2postfix'>
+				<arg value='${CLASSPATH}/input.infix'/>
+			</java>
+	</target>
+	<target name="Token">
+		<javac srcdir='./' includes='Token.java'>
+			<java refid="Token.class.path"/>
+		</javac>
+	</target>
+	   <target name="opType">
+      <javac srcdir='./' includes='opType.java'>
+         <java refid="opType.class.path"/>
+      </javac>
+   </target>
+   <target name="Operand">
+      <javac srcdir='./' includes='Operand.java'>
+         <java refid="Operand.class.path"/>
+      </javac>
+   </target>
+   <target name="Operator">
+      <javac srcdir='./' includes='Operator.java'>
+         <java refid="Operator.class.path"/>
+      </javac>
+   </target>
+
+
+
+
+
+</project>
+	
