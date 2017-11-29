@@ -1,0 +1,11 @@
+
+*Important*
+
+I coded in Eclipse for this assignment for easy troubleshoot and tools as I code and it works perfectly on Eclipse.
+However, when I transfered to PuTTy it throw errors. 
+
+
+In my further research, PuTTy happens to compile differently then Eclipse
+and some of the features aren't provided. 
+
+
