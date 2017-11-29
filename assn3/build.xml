@@ -35,7 +35,15 @@
       </javac>
    </target>
 
-
+	<target name="docs">
+		<javadoc
+			destrdir="docs"
+			author="yes"
+			use="true">
+		<fileset dir="." defaultexcludes="yes"/>
+		</javadoc>
+	</target>
+			
 
 
 
