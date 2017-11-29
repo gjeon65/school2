@@ -1,5 +1,16 @@
+The text file name is 'input.infix' and has to be in current directory.
 
-*Important*
+
+I had issues with converting Eclipse file to here at PuTTy. Had to change
+some of parts in order to work in PuTTy. The file seem to work fine at the
+moment. But just in case, if you cannot compile, use javac -Xlint:unchecked
+*.java'. 
+
+
+
+
+
+*fixed*
 
 I coded in Eclipse for this assignment for easy troubleshoot and tools as I code and it works perfectly on Eclipse.
 However, when I transfered to PuTTy it throw errors. 
