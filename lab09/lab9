@@ -1,0 +1,28 @@
+Part 1: Debugging
+
+Q1.1: Error occured. Following is the output:
+
+Enter a string to search for => random
+Segmentation fault (core dumped)
+
+Q1.2:
+on inTable function, SIGSEGV, Segmentation fault.
+
+Q1.3:
+
+a.In main function, scanf needed to be changed to 'scanf(%d,&n)'.
+
+b.in main function, int and double type was misplaced. %d is for int %lf for
+double. So, printf("Pi=%lf, n=%d\n", pi, n); is correct.
+
+c. In while loop, it starts to increment before st[numLines] so it needs to
+be increment after. So, in while loop, st[numLines] = strdup(buff); ++numLines; is correct.
+
+d. In main function, scanf should be 'scanf("d",&n).
+
+e.SIGSEGV, segmentation fault, on line 33. I could not figure out the
+solution. But my best guess is swap function does not restore the pivot.
+
+Q1.4: The compiler cannot find logical error.
+
+Q1.5: Error, SIGSEGV, Segmentation fault.
