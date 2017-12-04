@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+	Edited: Geun Jeon for CS 265 lab09
+	Got it from prof. Kurt
+	~/kschmidt/public_html/CS265/Labs/Java/Junit/build.xml
+	modifying to fit lab09
+-->
+<project default='test' basedir='.'>
+	<description>
+		'CS 265 - Lab 09'
+	</description>
+
+	<path id="project.class.path">
+			<!-- get your current classpath -->
+		<pathelement path='${CLASSPATH}'/>
+			<!-- add location of junit.jar -->
+		<pathelement location='/usr/share/java/junit4.jar'/>
+		<pathelement location='.'/>
+	</path>
+
+		<!-- shut ant up about includeantruntime not being set -->
+	<presetdef name="my.javac">
+		<javac includeantruntime="false" />
+	</presetdef>
+
+  <target name="run" depends='compile'>
+    <java classname='gInt'>
+			<classpath refid="project.class.path"/>
+		</java>
+		<!--<java classname='MoneyTest'/>-->
+  </target>
+
+  <target name="compile" depends='gInt.java'>
+    <my.javac srcdir='./' includes='gInt.java'/>
+		<!-- Not sure <javac srcdir='./'/> -->
+  </target>
+
+  <target name="gIntTest">
+    <my.javac srcdir='./' includes='gIntTest.java'>
+			<classpath refid="project.class.path"/>
+		</my.javac>
+  </target>
+
+	<target name='test' depends='compile,gIntTest'>
+		<junit printsummary="yes" haltonfailure="no" fork="true">
+			<classpath refid="project.class.path"/>
+			<formatter type='plain'/>
+			<test name='gTest'>
+				<formatter type='plain'/>
+			</test>
+		</junit>
+	</target>
+
+  <target name="clean">
+    <delete>
+			<fileset dir="./">
+				<include name='*.class'/>
+				<include name='TEST*.txt'/>
+			</fileset>
+		</delete>
+  </target>
+</project>
+
