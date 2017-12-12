@@ -1,4 +1,0 @@
-
-blah :
-	echo "$(crap)"
-

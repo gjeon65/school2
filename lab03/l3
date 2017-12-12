@@ -29,7 +29,7 @@ Q1.11: There are 10 blank lines.
  
 Part 2: Git lab
 
-Q2.1: I used both reset and revert to try things out. 
+Q2.1: I use git reset --hard to discard all changes. But I used both reset and revert to try things out. 
 
 Q2.2: You can check using git log to see commit history and git diff to see
 the changes.

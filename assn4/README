@@ -1,0 +1,14 @@
+ReadMe:
+
+	1)Run program, it will prompt for inputs such as -i, -h, etc.
+	
+	2)To see changes in ACCT_LIST, use -d option at main menu. After, you
+	change with Withdraw or Deposit option. It will generate sample.log file.
+	
+	3)Coded in python IDE, sometimes, inputs/outputs in PuTTy does not appear
+	in screen. I have no clue why. (It rarely happened during transfering and
+	check to see if it works) If this happens, run program again or simply, 
+	re-type previous options.
+
+PS)I was not sure if you wanted to merge ACCT_LIST with text.txt. So, I made
+option to just see changes.
