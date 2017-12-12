@@ -3,7 +3,7 @@
 """
 Geun Jeon
 CS265-002
-Assignment 4
+Assignment 4: accounts
 2017-12-12
 """
 
