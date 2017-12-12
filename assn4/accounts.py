@@ -59,14 +59,15 @@ def depOrWith(getAccNum,getAccNam):
             ACCT_LIST.append("%s:%s:%s:%s:%s" %(getAccNum, getAccNam, today,"D", deposit))
             
             print("Deposit Successful")
+            print("To see changes, go to main menu and use -d option")
             transaction()
-
         elif tranInput =="w":
             ACCT_LIST=[]
             withdraw = float(input("Enter amount: "))
             ACCT_LIST.append("%s:%s:%s:%s:%s" %(getAccNum, getAccNam, today,"W", withdraw))
             
             print("Withdrew Successful")
+            print("To see changes, go to main menu and use -d option")
             transaction()
                 
         elif tranInput =="m":
@@ -92,13 +93,13 @@ def createAcc():
     global ACCT_LIST,account_data_info, today
 
     name = raw_input("What is your full name? ")
-    money = float(input("you have to deposit X amount of money: $"))
+    money = float(raw_input("you have to deposit X amount of money: $"))
     accID = randint(1000,9999)
 
     if accID not in account_data_info:
         ACCT_LIST.append("%s:%s:%s:%s:%s\n" %(accID, name, today, "D",money))
         print("Following is added",ACCT_LIST)
-        transaction()
+        main()
     
 def transaction():
     global sorted_ID, raw_ID
@@ -111,6 +112,7 @@ def transaction():
         print(i+1,account_data_info[i])
     print("n for new account")
     print("q for exit")
+    print("m for main menu")
     task = raw_input("Enter choice: ")
     try:
         if task == "q":
@@ -338,7 +340,7 @@ def main():
                     output.write(str(ACCT_LIST[i]))
                     output.write('\n')
             
-    elif task != "-i" or "-t" or "-h" or "-q" or "d":
+    elif task != "-i" or "-t" or "-h" or "-q" or "-d":
         print("Wrong input try again.")
         main()
     
