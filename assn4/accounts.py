@@ -38,9 +38,9 @@ any changes are saving into ACCT_LIST and sample.log file
 I am not sure, if you wanted to change text.txt 
 """
 def depOrWith(getAccNum,getAccNam):
-    print("This is ",getAccNum," for ", getAccNam)
+    print("Account No.",getAccNum," is for ", getAccNam)
     global ACCT_LIST,account_data_info, today
-    print("\n","Deposit or Withdraw: \n")
+    print("Deposit or Withdraw: \n")
     print("d for deposit")
     print("w for withdraw")
     print("q for exit")
